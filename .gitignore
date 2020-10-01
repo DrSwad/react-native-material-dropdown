@@ -1,5 +1,5 @@
-node_modules
-example/node_modules
+node_modules/
+yarn.lock
 
 .DS_Store
 *.sw[po]

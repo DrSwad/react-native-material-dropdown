@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import React, { PureComponent } from 'react';
-import { Button } from 'react-native-material-buttons';
+import React, {PureComponent} from 'react';
+import {Button} from 'react-native-material-buttons';
 
 import styles from './styles';
 
@@ -25,7 +25,7 @@ export default class DropdownItem extends PureComponent {
   }
 
   onPress() {
-    let { onPress, index } = this.props;
+    let {onPress, index} = this.props;
 
     if ('function' === typeof onPress) {
       onPress(index);
@@ -33,15 +33,13 @@ export default class DropdownItem extends PureComponent {
   }
 
   render() {
-    let { children, style, index, ...props } = this.props;
+    let {children, style, index, ...props} = this.props;
 
     return (
       <Button
         {...props}
-
         style={[styles.container, style]}
-        onPress={this.onPress}
-      >
+        onPress={this.onPress}>
         {children}
       </Button>
     );
